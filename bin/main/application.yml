@@ -1,0 +1,42 @@
+spring.main.allow-bean-definition-overriding: true
+logging:
+  level:
+    org.springframework: INFO
+
+facebook:
+    client:
+      clientId: 1337576873085216
+      clientSecret: 30a4547aa52a509e42246837d0ecfcc4
+      accessTokenUri: https://graph.facebook.com/oauth/access_token
+      userAuthorizationUri: https://www.facebook.com/dialog/oauth
+      tokenName: oauth_token
+      authenticationScheme: query
+      clientAuthenticationScheme: form
+    resource:
+      userInfoUri: https://graph.facebook.com/me
+
+google:
+  client:
+    clientId: 244774245669-r6rl5va0kg0sjv2n4ppi9soa5luvqr6q.apps.googleusercontent.com 
+    clientSecret: 4UpxTEAfHsPrBzHXtubUIInI 
+    access-token-uri: https://www.googleapis.com/oauth2/v4/token
+    user-authorization-uri: https://accounts.google.com/o/oauth2/v2/auth
+    client-authentication-scheme: form
+    scope: 
+    - https://www.googleapis.com/auth/userinfo.profile
+    - https://www.googleapis.com/auth/cloud-platform
+    - https://www.googleapis.com/auth/user.phonenumbers.read
+    - https://www.googleapis.com/auth/pubsub
+    authenticationScheme: query
+  resource:
+    userInfoUri: https://www.googleapis.com/oauth2/v3/userinfo
+
+github:
+  client:
+    clientId: 26f1391296a334ac3638
+    clientSecret: c9c93a6954a889c1f59ab0622580f0d4f5e229cd
+    accessTokenUri: https://github.com/login/oauth/access_token
+    userAuthorizationUri: https://github.com/login/oauth/authorize
+    clientAuthenticationScheme: form
+  resource:
+    userInfoUri: https://api.github.com/user
