@@ -3,6 +3,30 @@ logging:
   level:
     org.springframework: INFO
 
+spring:
+    datasource:
+        driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+        password: Aa12345678
+        url: jdbc:sqlserver://localhost;instanceName=SQLSERVERDEV2017;databaseName=restaurant
+        username: sa
+    jpa:
+        database-platform: org.hibernate.dialect.SQLServer2012Dialect
+        hibernate:
+            ddl-auto: create-drop
+        show-sql: true
+    main:
+        allow-bean-definition-overriding: true
+
+security:
+  oauth2:
+    client:
+      client-id: client
+      client-secret: client
+      scope: read,write
+      #這一項一定要加!
+      registered-redirect-uri:
+      - http://localhost:9999/client/login
+
 facebook:
     client:
       clientId: 1337576873085216

@@ -1,0 +1,14 @@
+server:
+  port: 9999
+  #改context-path要這樣寫
+  servlet:
+    context-path: /client
+security:
+  oauth2:
+    client:
+      client-id: client
+      client-secret: client
+      access-token-uri: http://localhost:8080/oauth/token
+      user-authorization-uri: http://localhost:8080/oauth/authorize
+    resource:
+      user-info-uri: http://localhost:8080/me
